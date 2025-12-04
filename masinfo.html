@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="masinfo.css">
+</head>
+<body>
+  
+<a href="index.html" class="volver-btn">⬅ Volver al Inicio</a>
+
+<section class="cartelera">
+    <h2 class="cartelera-titulo">🎬 Cartelera Marvel</h2>
+
+    <div class="grid-cartelera">
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <img src="avenger endgame.jpg" alt="Endgame">
+            <div class="card-info">
+                <h3>Avengers: Endgame</h3>
+                <p>Los Vengadores intentan revertir el daño causado por Thanos.</p>
+                <button onclick="verTrailer('https://www.youtube.com/embed/PyakRSni-c0')">
+                    Ver trailer
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <img src="infinity war.jpg" alt="Infinity War">
+            <div class="card-info">
+                <h3>Avengers: Infinity War</h3>
+                <p>Thanos busca las Gemas del Infinito para reescribir el universo.</p>
+                <button onclick="verTrailer('https://www.youtube.com/embed/6ZfuNTqbHE8')">
+                    Ver trailer
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <img src="spider man.jpg" alt="Spider-Man">
+            <div class="card-info">
+                <h3>Spider-Man: No Way Home</h3>
+                <p>Peter Parker abre el multiverso accidentalmente.</p>
+                <button onclick="verTrailer('https://www.youtube.com/embed/JfVOs4VSpmA')">
+                    Ver trailer
+                </button>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+            <img src="age of ultron.jpg" alt="Age of Ultron">
+            <div class="card-info">
+                <h3>Avengers: Age of Ultron</h3>
+                <p>La creación de Tony Stark se convierte en una amenaza mundial.</p>
+                <button onclick="verTrailer('https://www.youtube.com/embed/tmeOjFno6Do')">
+                    Ver trailer
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal para ver trailers -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <iframe id="trailerFrame" src="" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+function verTrailer(url) {
+    document.getElementById('modal').style.display = 'flex';
+    document.getElementById('trailerFrame').src = url;
+}
+
+function cerrarModal() {
+    document.getElementById('trailerFrame').src = "";
+    document.getElementById('modal').style.display = 'none';
+}
+</script>
+
+
+<footer class="footer-marvel">
+  <div class="footer-content">
+    <h3>🌟 Más del Universo Marvel</h3>
+
+    <p>
+      Para saber más sobre las películas de Marvel, visita:
+      <a href="https://www.marvel.com/movies" target="_blank">Marvel Movies</a>
+    </p>
+
+    <p>
+      ¿Querés merch oficial? Visitá:
+      <a href="https://www.marvel.com/live-events/nycc-new-york-comic-con-2023/browse-merchandise" target="_blank">Marvel Merch</a>
+    </p>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 El maravilloso mundo de Marvel – Fanpage sin fines comerciales</p>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

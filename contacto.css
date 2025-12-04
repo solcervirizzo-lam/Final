@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  background: #492222;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.contact-section {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.marvel-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #e62429; /* rojo Marvel */
+  text-shadow: 0 0 10px rgba(230,36,41,0.7);
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #e4e4e4;
+  letter-spacing: 1px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #e62429;
+  box-shadow: 0 0 8px rgba(230,36,41,0.6);
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 130px;
+  resize: vertical;
+}
+
+.contact-form input:hover{
+   background: #b51d22;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(230,36,41,0.8);
+}
+
+.contact-form textarea:hover{
+   background: #b51d22;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(230,36,41,0.8);
+}
+
+.marvel-btn {
+  background: #e62429;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.marvel-btn:hover {
+  background: #b51d22;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(230,36,41,0.8);
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact-info h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #e62429;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+
+
+/* 📱 Diseño Responsive para pantallas pequeñas */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    background: linear-gradient(160deg, #8a2be2, #4b0082);
+  }
+
+  .login-container {
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input, button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .extra {
+    font-size: 13px;
+  }
+}
+

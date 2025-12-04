@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Comprar.css">
+    
+</head>
+<body>
+    <section class="merch-section">
+  <h2 class="marvel-title">Comprar</h2>
+
+    <div class="merch-grid">
+
+        <div class="merch-card">
+            <img src="remera marvel.png" alt="Remera Marvel Classic">
+            <h3>Remera Marvel Classic</h3>
+            <p>$15.000 ARS</p>
+            <button class="marvel-btn" onclick="addToCart('Remera Marvel Classic', 15000)">Comprar</button>
+        </div>
+
+
+        <div class="merch-card">
+            <img src="gorra.jpg" alt="Gorra Logo Personajes de Marvel">
+            <h3>Gorra Logo Personajes de Marvel</h3>
+            <p>$12.500 ARS</p>
+            <button class="marvel-btn" onclick="addToCart('Gorra Logo Personajes de Marvel', 12500)">Comprar</button>
+        </div>
+
+        <div class="merch-card">
+            <img src="buzo.jpg" alt="Buzo Avengers">
+            <h3>Buzo Avengers</h3>
+            <p>$25.000 ARS</p>
+            <button class="marvel-btn" onclick="addToCart('Buzo Avengers', 25000)">Comprar</button>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="cart-section">
+  <h2 class="marvel-title">CARRITO</h2>
+
+  <div id="cart-items"></div>
+
+  <p class="cart-total">Total: $<span id="cart-total">0</span> ARS</p>
+
+  <button class="marvel-btn" onclick="checkout()">Finalizar compra</button>
+</section>
+
+<link rel="stylesheet" href="merch.css">
+
+<script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price });
+            total += price;
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            total -= cart[index].price;
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsDiv = document.getElementById("cart-items");
+            const cartTotalSpan = document.getElementById("cart-total");
+
+            cartItemsDiv.innerHTML = "";
+
+            cart.forEach((item, index) => {
+                cartItemsDiv.innerHTML += `
+                <div class="cart-item">
+                    <span>${item.name} — $${item.price}</span>
+                    <button onclick="removeFromCart(${index})">X</button>
+                </div>
+                `;
+            });
+
+            cartTotalSpan.textContent = total;
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Tu carrito está vacío.");
+                return;
+            }
+
+            alert("¡Gracias por tu compra heroica! 🦸‍♂️");
+
+            // Vaciar carrito
+            cart = [];
+            total = 0;
+            updateCart();
+
+            // Redirigir al index
+            window.location.href = "index.html";
+            }
+    </script>
+
+
+</body>
+</html>

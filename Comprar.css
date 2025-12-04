@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.merch-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.marvel-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #e62429;
+  text-shadow: 0 0 12px rgba(230,36,41,0.7);
+  margin-bottom: 40px;
+}
+
+/* GRID DE PRODUCTOS */
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* TARJETAS */
+.merch-card {
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.merch-card:hover {
+  transform: scale(1.05);
+  border-color: #e62429;
+  box-shadow: 0 0 20px rgba(230,36,41,0.7);
+}
+
+.merch-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.merch-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  margin: 10px 0 5px;
+}
+
+.merch-card p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+/* BOTONES */
+.marvel-btn {
+  background: #e62429;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.marvel-btn:hover {
+  background: #b51d22;
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(230,36,41,0.8);
+}
+
+/* ====== CONTENEDOR DEL CARRITO ====== */
+.cart-section {
+    background: linear-gradient(145deg, #0c0c0c, #1a1a1a);
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #e62429;
+    box-shadow: 0 0 15px rgba(230, 36, 41, 0.6);
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* ====== TÍTULO DEL CARRITO ====== */
+.cart-section .marvel-title {
+    font-size: 34px;
+    letter-spacing: 2px;
+    color: #e62429;
+    text-shadow: 0 0 15px rgba(230, 36, 41, 0.9);
+    margin-bottom: 20px;
+}
+
+/* ====== ITEM DEL CARRITO ====== */
+.cart-item {
+    background: #111;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Animación suave */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover con efecto heroico */
+.cart-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px rgba(230, 36, 41, 0.5);
+}
+
+/* ====== TEXTO DE LOS PRODUCTOS ====== */
+.cart-item span {
+    font-size: 18px;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* ====== BOTÓN ELIMINAR ====== */
+.cart-item button {
+    background: #e62429;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cart-item button:hover {
+    background: #ff2d35;
+    transform: scale(1.1);
+}
+
+/* ====== TOTAL ====== */
+.cart-total {
+    font-size: 22px;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: right;
+    color: #e62429;
+    text-shadow: 0 0 8px rgba(230, 36, 41, 0.8);
+    margin-top: 10px;
+}
+
+/* ====== BOTÓN FINALIZAR COMPRA ====== */
+.cart-section .marvel-btn {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 22px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.cart-section .marvel-btn:hover {
+    box-shadow: 0 0 20px rgba(230, 36, 41, 1);
+    transform: scale(1.04);
+}
+
+/* 📱 Diseño Responsive para pantallas pequeñas */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    background: linear-gradient(160deg, #8a2be2, #4b0082);
+  }
+
+  .login-container {
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input, button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .extra {
+    font-size: 13px;
+  }
+}

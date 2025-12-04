@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #492222;
+  padding: 20px;
+}
+
+.email{ 
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Bebas Neue', sans-serif;}
+  
+.email:hover {
+  background: #5c0b0b;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(92, 5, 133, 0.8);
+}
+
+.Contraseña{
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.Contraseña:hover{  
+  background: #5c0b0b;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(92, 5, 133, 0.8);
+}
+
+.marvel-btn {
+  background: #000000;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.marvel-btn:hover {
+  background: #5c0b0b;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(92, 5, 133, 0.8);
+}
+
+
+.login-container {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #8a2be2;
+  box-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #6c1fb4;
+}
+
+label,input,button{
+    display: block;
+}
+
+.extra {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.extra a {
+  color: #8a2be2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.extra a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Diseño Responsive para pantallas pequeñas */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    background: linear-gradient(160deg, #8a2be2, #4b0082);
+  }
+
+  .login-container {
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input, button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .extra {
+    font-size: 13px;
+  }
+}

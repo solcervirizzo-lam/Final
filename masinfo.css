@@ -1,0 +1,217 @@
+body{
+    background-color: #492222;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.cartelera {
+    padding: 40px 20px;
+    background: #0b0c10;
+    color: white;
+}
+
+.cartelera-titulo {
+    text-align: center;
+    font-size: 45px;
+    color: #e23636;
+    margin-bottom: 40px;
+    font-family: poppins, sans-serif;
+}
+
+/* 🟥 GRILLA TIPO CINE */
+.grid-cartelera {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* 🟥 CARTAS */
+.card {
+    background: #1f2833;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.7);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+/* Texto */
+.card-info h3 {
+    font-size: 22px;
+    margin: 0 0 10px;
+    color: #66fcf1;
+    font-family: poppins, sans-serif, Bold;
+}
+
+.card-info p {
+    font-size: 15px;
+    font-family: poppins, sans-serif;
+    opacity: .9;
+    margin-bottom: 15px;
+}
+
+/* Botón Trailer */
+.card-info button {
+    width: 100%;
+    background: #e23636;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.card-info button:hover {
+    background: #b02020;
+}
+
+/* 🟥 MODAL (TRAILER) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+}
+
+.cerrar {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.footer-marvel {
+  background: #0b0c10;
+  padding: 40px 20px;
+  margin-top: 50px;
+  border-top: 3px solid #e23636;
+  text-align: center;
+  color: #c5c6c7;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-marvel h3 {
+  color: #e23636;
+  font-size: 28px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.footer-marvel p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.footer-marvel a {
+  color: #66fca4;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-marvel a:hover {
+  color: #45a29e;
+}
+
+.footer-bottom {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+  font-size: 14px;
+  color: #888;
+}
+
+.volver-btn {
+    display: flex;
+    text-align: right;
+    font-family: "Poppins", sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    background: #b81c22;
+    color: white;
+    padding: 15px 25px;
+    border-bottom: 2px solid #c2a23a;
+    position: sticky;
+    top: 0;
+    z-index:10;
+}
+
+.volver-btn:hover {
+    background-color: #b81c22;
+}
+
+
+
+/* 📱 RESPONSIVE PARA CELULAR */
+@media (max-width: 768px) {
+    .grid-cartelera {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-cartelera {
+        grid-template-columns: 1fr;
+    }
+    .cartelera-titulo {
+        font-size: 32px;
+    }
+    iframe {
+        height: 250px;
+    }
+}
+
+/* 📱 Responsive Footer */
+@media (max-width: 480px) {
+  .footer-marvel h3 {
+    font-size: 22px;
+  }
+  .footer-marvel p {
+    font-size: 14px;
+  }
+  .footer-bottom {
+    font-size: 12px;
+  }
+}
